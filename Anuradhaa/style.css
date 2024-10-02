@@ -1,0 +1,893 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Work+Sans:wght@400;500;600;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Work Sans", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+  /* 1rem = 10px */
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: #081b29;
+}
+
+.header {
+  padding: 0 4.8rem;
+  height: 10rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color:#081b29;
+}
+
+.header .logo {
+  height: 4rem;
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: white;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+
+.navbar-list {
+  display: flex;
+  gap: 4.8rem;
+  list-style: none;
+}
+
+
+.navbar-link:link,
+.navbar-link:visited {
+  display: inline-block;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 500;
+  color: white;
+  transition: all 0.3s;
+}
+
+.navbar-link:hover,
+.navbar-link:active {
+  color: #0ef;
+}
+
+.header .logo:hover{
+    color: #0ef;
+}
+
+.mobile-navbar-btn {
+  display: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.mobile-nav-icon {
+  width: 4rem;
+  height: 4rem;
+  color: white;
+}
+
+/* cross -icon hideden */
+.mobile-nav-icon[name="close-outline"] {
+  display: none;                 
+}
+
+/* ===========================================
+Hero and Service Section Start
+======================================= */
+
+.panda {
+  max-width: 30rem;
+  height: 30rem;
+  border-radius: 60%;
+}
+
+.rightside{
+  /* border-radius: 30% 70% 70% 30% /30% 30% 70% 70%; */
+  background-color:#081b29;
+}
+main{
+  height: 90vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+}
+
+
+.leftside{
+  color: white;
+  text-transform: uppercase ;
+  background-color: #081b29;
+}
+
+.leftside h3{
+font-size:3.2rem;
+font-weight: 600;
+opacity: 0;
+animation: slideBottom 1s ease forwards;
+animation-delay: .7s;
+}
+.leftside h1{
+  font-size: 56px;
+  font-weight: 700;
+  margin: -3px 0;
+  opacity: 0;
+  animation: slideRight 1s ease forwards;
+  animation-delay: 1s;
+}
+
+.leftside p {
+  font-size: 20px;
+  opacity: 0;
+  animation: slideLeft 1s ease forwards;
+  animation-delay: 1s;
+}
+
+.leftside h3 span {
+  color: red;
+}
+
+.home-sci a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: 2px solid #0ef;
+  border-radius: 50%;
+  font-size: 20px;
+  color: #0ef;
+  text-decoration: none;
+  transition: .5s ease;
+  opacity: 0;
+  animation: slideLeft 1s ease forwards;
+  animation-delay: calc(.2s *--i);
+  margin: 30px 15px 30px 0;
+}
+
+.wp:hover {
+  background-color:rgb(9, 6, 109) ;
+  color: white;
+  box-shadow: 0 0 20px rgb(8, 5, 82);
+}
+
+.yt:hover {
+  background-color: red;
+  color: white;
+  box-shadow: 0 0 20px red;
+}
+
+.in:hover {
+  background-color: deeppink;
+  color: white;
+  box-shadow: 0 0 20px deeppink;
+}
+
+.li:hover {
+  background-color: #0ef;
+  color: white;
+  box-shadow: 0 0 20px #0ef;
+}
+
+.btn-box {
+  display: inline-block;
+  padding: 12px 28px;
+  background-color: #0ef;
+  border-radius: 40px;
+  font-size: 16px;
+  color: #081b29;
+  letter-spacing: 1px;
+  text-decoration: none;
+  font-weight: 600;
+  opacity: 0;
+  animation: slideTop 1s ease forwards;
+  animation-delay: 2s;
+  box-shadow: 0 0 5px #0ef,
+      0 0 20px #0ef;
+}
+
+.btn-box:hover {
+
+  box-shadow: 0 0 5px cyan,
+      0 0 25px cyan, 0 0 50px cyan,
+      0 0 100px cyan, 0 0 200px cyan;
+}
+
+
+
+/* ===========================================
+aNIMATIONS FOR  Codes HOME SECTION 
+======================================= */
+
+@keyframes slideBottom {
+  0% {
+      transform: translateY(-100px);
+      opacity: 0;
+  }
+
+  100% {
+      transform: translateY(0px);
+      opacity: 1;
+  }
+}
+@keyframes slideRight {
+  0% {
+      transform: translateX(-100px);
+      opacity: 0;
+  }
+
+  100% {
+      transform: translateX(0px);
+      opacity: 1;
+  }
+}
+@keyframes slideLeft {
+  0% {
+      transform: translateX(100px);
+      opacity: 0;
+  }
+
+  100% {
+      transform: translateX(0px);
+      opacity: 1;
+  }
+}
+@keyframes slideTop {
+  0% {
+      transform: translateY(100px);
+      opacity: 0;
+  }
+
+  100% {
+      transform: translateY(0px);
+      opacity: 1;
+  }
+}
+
+
+/* ===========================================
+Responsive Codes FOR NAV BAR
+======================================= */
+
+/* 980px  1em=16px*/
+@media (max-width: 62em) {
+  .mobile-navbar-btn {
+    display: block;
+    z-index: 999;
+    border: 2px solid white;
+    color: white;
+  }
+
+  .header {
+    position: relative;
+  }
+
+  .header .logo {
+    width: 40%;
+  }
+
+  .navbar {
+    /* display: none; */
+    width: 100%;
+    height: 50vh;
+    background:#212529;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* to get the tranisition  */
+    transform: translateX(100%);
+    transition: all 0.5s linear;
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  .navbar-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .active .navbar {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  .active .mobile-navbar-btn .mobile-nav-icon[name="close-outline"] {
+    display: block;
+  }
+
+  .active .mobile-navbar-btn .mobile-nav-icon[name="menu-outline"] {
+    display: none;
+  }
+}
+
+/* Below 560px  */
+@media (max-width: 35em) {
+  .header {
+    padding: 0 2.4rem;
+  }
+
+  .header .logo {
+    width: 60%;
+  }
+}
+
+
+
+
+/* ===========================================
+Responsive Codes FOR HOME SECTION
+======================================= */
+
+/* Below 768px (Tablet Portrait) */
+@media (max-width: 48em) {
+  main {
+    flex-direction: column-reverse; /* Stack the sections vertically and reverse the order */
+    height: auto; /* Adjust height to fit content */
+  }
+
+  .leftside,
+  .rightside {
+    width: 100%; /* Make each section take up the full width */
+    text-align: center; /* Center the content */
+  }
+
+  .panda {
+    max-width: 70%; /* Reduce the size of the image */
+    height: auto;
+    margin-bottom: 2rem; /* Add some space between the image and text */
+  }
+
+  .leftside h1 {
+    font-size: 3.2rem; /* Decrease font size */
+  }
+}
+
+/* Below 560px (Phone Landscape) */
+@media (max-width: 35em) {
+  .leftside h1 {
+    font-size: 2.8rem; /* Further decrease font size */
+  }
+
+  .leftside p {
+    font-size: 1.6rem; /* Adjust font size for paragraphs */
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+
+
+
+/* ===========================================
+Responsive Codes FOR SKILLS SECTION
+======================================= */
+
+.mh-skills h1{
+  color: white;
+  text-align: center;
+  font-size: 50px;
+  margin: 30px;
+
+}
+.myskills h2{
+  color:  #0ef;
+}
+
+.myskills {
+  width: 50%;
+  margin: auto;
+}
+
+.myskills>h1 {
+  color: #0ef;
+  margin: 10px;
+}
+
+.skill {
+  margin-bottom: 15px;
+
+}
+
+.container-skills {
+  width: 100%;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+}
+
+.skillset {
+  text-align: right;
+  color: #fff;
+  transition: width 0.5s;
+}
+
+.skillset.mysql {
+  width: 60%;
+  background: linear-gradient(to right, #034876, #6dd5fa);
+
+}
+
+.skillset.html {
+  width: 75%;
+  background: linear-gradient(to right, #ff416c, #ff4b2b);
+}
+
+.skillset.python {
+  width: 60%;
+  background: linear-gradient(to right, #cdd70d, #2980b9);
+}
+
+.skillset.css {
+  width: 50%;
+  background: linear-gradient(to right, #2980b9, #6dd5fa);
+}
+
+.skillset.java {
+  width: 55%;
+  background: linear-gradient(to right, #fff, red);
+}
+
+.skillset.javascript {
+  width: 30%;
+  background: linear-gradient(to right, #cdd70d, #b8fa6d);
+}
+.skillset.sel {
+  width: 40%;
+  background: linear-gradient(to right, green, #b8fa6d);
+}
+
+/* Add similar styling for other skills */
+
+.skillset:hover {
+  width: 95%;
+}
+
+.fa {
+  margin-right: 5px;
+}
+
+
+.skills-container {
+  display: flex;
+}
+
+.left-skills {
+  flex: 1;
+} */
+
+.right-skills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+} 
+
+
+
+/* right */
+.right-skills{
+  color: #0ef;
+}
+.container{
+background-color: #081b29;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+.progress1 {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  color: #fff;
+  background: #444 linear-gradient(to right, transparent 10%, var(--clr) 0);
+}
+.progress2 {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  color: #fff;
+  background: #444 linear-gradient(to right, transparent 30%, var(--clr) 0);
+}
+.progress3 {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  color: #fff;
+  background: #444 linear-gradient(to right, transparent 20%, var(--clr) 0);
+}
+.progress4 {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  color: #fff;
+  background: #444 linear-gradient(to right, transparent 15%, var(--clr) 0);
+}
+
+.progress1 h3,
+.progress2 h3,
+.progress3 h3,
+.progress4 h3{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2.5em;
+  z-index: 1;
+  font-weight: 500;
+}
+.container .progress1 h3 span,
+.container .progress2 h3 span,
+.container .progress3 h3 span,
+.container .progress4 h3 span{
+  font-size: 0.65em;
+  font-weight: 400;
+}
+
+.container .progress1 h4,
+.container .progress2 h4,
+.container .progress3 h4,
+.container .progress4 h4{
+  position: absolute;
+  top :62%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  font-weight: 500;
+  color: #0ef ;
+
+} 
+.container .progress1::before,
+.container .progress2::before,
+.container .progress3::before,
+.container .progress4::before{
+  content: '';
+  display: block;
+  height: 90%;
+  margin-left: 50%;
+  transform-origin: left;
+  border-radius: 0 100% 100% 0/50%;
+}
+.container .progress1::after ,
+.container .progress2::after,
+.container .progress3::after,
+.container .progress4::after{
+  content: '';
+  position:absolute;
+  inset:5px;
+  border-radius: 50%;
+  background: #081b29;
+}
+
+.up{
+  display: flex;
+  justify-content: space-around;
+  gap:0px;
+  
+}
+.down{
+
+  display: flex;
+  justify-content: space-around;
+  gap:0px;
+}
+
+.mh-skills{
+  width:100%;
+  height:auto;
+}
+
+
+
+
+
+
+/* Below 768px (Tablet Portrait) */
+@media (max-width: 48em) {
+  /* Adjust styles for left-skills and right-skills containers */
+  .left-skills, .right-skills {
+    width: 100%; /* Make each container take up the full width */
+    text-align: center; /* Center the content */
+  }
+
+  /* Reduce font size for skill names */
+  .myskills .skill {
+    font-size: 1.8rem;
+  }
+
+  /* Adjust margin and font size for progress bars */
+  .progress h3, .progress h4 {
+    font-size: 1.6rem;
+    margin: 0.5rem 0;
+  }
+}
+
+/* Below 560px (Phone Landscape) */
+@media (max-width: 35em) {
+  /* Further reduce font size for skill names */
+  .myskills .skill {
+    font-size: 1.6rem;
+  }
+
+  /* Further adjust margin and font size for progress bars */
+  .progress h3, .progress h4 {
+    font-size: 1.4rem;
+    margin: 0.3rem 0;
+  }
+}
+
+
+
+
+/* Adjustments for Left Skills Section */
+.left-skills {
+  width: 100%; /* Make left-skills take full width */
+  text-align: center; /* Center content */
+  margin-bottom: 20px; /* Add some space between left and right sections */
+}
+
+.myskills {
+  width: 90%; /* Adjust width for better responsiveness */
+  margin: auto;
+}
+
+.myskills > h1 {
+  color: #0ef;
+  margin: 10px 0; /* Adjust margin for better spacing */
+}
+
+.skill {
+  margin-bottom: 15px;
+}
+
+.container-skills {
+  width: 100%;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+}
+
+.skillset {
+  text-align: right;
+  color: #fff;
+  transition: width 0.5s;
+}
+
+/* Adjustments for Right Skills Section */
+.right-skills {
+  text-align: center; /* Center content */
+  margin-bottom: 20px; /* Add some space between left and right sections */
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap; /* Ensure elements wrap on smaller screens */
+  justify-content: space-around; /* Distribute elements evenly */
+}
+
+.container {
+  width: 45%; /* Adjust width for better responsiveness */
+  padding: 10px;
+  margin: 10px;
+}
+
+/* Add media query for smaller screens if needed */
+@media (max-width: 768px) {
+  .skills-container {
+      flex-direction: column; /* Stack elements vertically on smaller screens */
+      align-items: center; /* Center elements */
+  }
+
+  .container {
+      width: 90%; /* Adjust width for better responsiveness */
+  }
+}
+
+
+
+
+
+
+
+/* ===========================================
+Responsive Codes FOR ABOUT SECTION
+======================================= */
+
+
+
+.containeredu {
+
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-top: 100px;
+  background-color:#081b29;
+
+
+}
+
+.card {
+  width: 325px;
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  transition: transform 0.6s ease;
+}
+
+.card:hover {
+  transform: translateY(-20px);
+  box-shadow: 0 0 5px cyan,
+      0 0 25px cyan, 0 0 50px cyan,
+      0 0 100px cyan, 0 0 200px cyan;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.cardcontent {
+  padding: 20px;
+}
+
+.cardcontent h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.cardcontent p {
+  font-size: 15px;
+  color: #666;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+.cardbutton {
+  font-size: 25px;
+  display: inline-block;
+  background-color: #3498db;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  padding: 8px 16px;
+}
+
+
+.cardcontent h1 {
+  color: #3498db;
+}
+
+
+/* ===========================================
+Responsive Codes FOR CERTIFICATION SECTION
+======================================= */
+/* certification */
+.carousel-item img {
+  max-width: 80%;
+  max-height: 100vh; /* Adjust the maximum height as needed */
+  margin: 0 auto; /* Centers the images horizontally */
+}
+
+.certifications h1 {
+  text-align: center; /* Center align the heading */
+  margin-bottom: 20px; /* Add some bottom margin for spacing */
+  color:cyan; /* Set the text color */
+}
+.certifications{
+  background-color:#081b29;
+}
+
+
+/* ===========================================
+Responsive Codes FOR PROJECT SECTION
+======================================= */
+
+
+.pro{
+  margin: 10px;
+}
+.containerp{
+background-color: #081b29;
+margin: 10px;
+}
+
+ .headingp{
+  text-align: center;
+  padding-bottom: 15px;
+  color:cyan;
+  text-shadow: 0 5px 10px rgba(0,0,0,.2);
+  font-size: 50px;
+}
+
+.containerp .box-containerp{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap:15px;
+}
+
+.containerp .box-containerp .boxp{
+  box-shadow: 0 5px 10px rgba(0,0,0,.2);
+  border-radius: 5px;
+  background: #fff;
+  text-align: center;
+  padding:30px 20px;
+}
+
+.containerp .box-containerp .boxp img{
+  height: 80px;
+}
+
+.containerp .box-containerp .boxp h3{
+  color:#444;
+  font-size: 22px;
+  padding:10px 0;
+}
+
+.containerp .box-containerp .boxp p{
+  color:#777;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.containerp .box-containerp .boxp .btn{
+  margin-top: 10px;
+  display: inline-block;
+  background:#333;
+  color:#fff;
+  font-size: 17px;
+  border-radius: 5px;
+  padding: 8px 25px;
+}
+
+.containerp .box-containerp .boxp .btn:hover{
+  letter-spacing: 1px;
+}
+
+.containerp .box-containerp .box:hover{
+  box-shadow: 0 10px 15px rgba(0,0,0,.3);
+  transform: scale(1.03);
+}
+
+@media (max-width:768px){
+  .container{
+      padding:20px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
